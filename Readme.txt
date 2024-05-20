@@ -23,8 +23,6 @@ Limitations Include:
     
     Model simplicity might not capture complex patterns in data, thus may underperform on more diverse and large datasets.
 
-
-
 Instructions:
 
 - Run detect.py. The code will execute some automated test cases, after which you can input your own statements.
@@ -34,3 +32,13 @@ Instructions:
 - To train with a new dataset, install the dataset as a CSV file and ensure it has the required format for columns. Then, place it in the assessment folder. Afterward, replace 'generated_data1.csv' with your dataset in line 46 of eval.py.
 
 - You can generate a larger dataset using generate_train_data.py. It will create new statements with words replaced by their synonyms. You can adjust the size by modifying the augmentation_factor on line 65.
+
+Screenshots:
+
+![Screenshot 1](Screenshots/detect.png)
+![Screenshot 2](Screenshots/eval.png)
+![Screenshot 3](Screenshots/files.png)
+![Screenshot 4](Screenshots/Generate_Data.png)
+![Screenshot 5](Screenshots/train.png)
+
+
