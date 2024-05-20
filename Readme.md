@@ -41,7 +41,7 @@ Instructions:
   <img src="Screenshots\files.PNG" />
 </p>
 <p align="center">
-  <img src="Screenshots\Generate_Data.PNG" />
+  <img src="Screenshots\Genrate_Data.PNG" />
 </p>
 <p align="center">
   <img src="Screenshots\train.PNG" />
