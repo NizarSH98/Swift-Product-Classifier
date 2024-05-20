@@ -1,4 +1,4 @@
-# AI Engineer (m/f/x) Assessment at payever
+# AI Engineer (m/f/x) Assessment
 
 Documentation
 Approach Taken:
