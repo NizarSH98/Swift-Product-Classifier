@@ -38,13 +38,13 @@ Instructions:
   <img src="Screenshots\eval.PNG" />
 </p>
 <p align="center">
-  <img src="Screenshots\files.png" />
+  <img src="Screenshots\files.PNG" />
 </p>
 <p align="center">
-  <img src="Screenshots\Generate_Data.png" />
+  <img src="Screenshots\Generate_Data.PNG" />
 </p>
 <p align="center">
-  <img src="Screenshots\train.png" />
+  <img src="Screenshots\train.PNG" />
 </p>
 
 
