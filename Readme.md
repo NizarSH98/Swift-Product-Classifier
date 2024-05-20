@@ -31,20 +31,20 @@ Instructions:
 ## Screenshots
 
 <p align="center">
-  <img src="Screenshots/detect.png" />
+  <img src="Screenshots\detect.PNG" />
 </p>
 
 <p align="center">
-  <img src="Screenshots/eval.png" />
+  <img src="Screenshots\eval.PNG" />
 </p>
 <p align="center">
-  <img src="Screenshots/files.png" />
+  <img src="Screenshots\files.png" />
 </p>
 <p align="center">
-  <img src="Screenshots/Generate_Data.png" />
+  <img src="Screenshots\Generate_Data.png" />
 </p>
 <p align="center">
-  <img src="Screenshots/train.png" />
+  <img src="Screenshots\train.png" />
 </p>
 
 
