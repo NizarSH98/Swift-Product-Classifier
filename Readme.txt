@@ -40,5 +40,3 @@ Screenshots:
 ![Screenshot 3](Screenshots/files.png)
 ![Screenshot 4](Screenshots/Generate_Data.png)
 ![Screenshot 5](Screenshots/train.png)
-
-
