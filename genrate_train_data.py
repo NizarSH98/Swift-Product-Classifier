@@ -52,51 +52,64 @@ def augment_data(data, augmentation_factor=1):
 
 # Original data
 data = {
-    "name": [
-        "Alpha",
-        "Beta",
-        "Gamma",
-        "Delta",
-        "Epsilon",
-        "Zeta",
-        "Eta",
-        "Theta",
-        "Iota",
-        "Kappa",
+    'name': [
+        'Theta', 'Zeta', 'Epsilon', 'Eta', 'Iota', 'Delta', 'Kappa', 'Gamma', 'Alpha', 'Beta',
+        'Lambda', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'Mu', 'Nu',
+        'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi'
     ],
-    "description": [
-        "Alpha is a durable and stylish product.",
-        "Beta is reliable and affordable.",
-        "Gamma offers premium quality.",
-        "Delta is designed for efficiency.",
-        "Epsilon is versatile and easy to use.",
-        "Zeta is an innovative solution.",
-        "Eta provides exceptional value.",
-        "Theta is top-rated for safety.",
-        "Iota is compact and convenient.",
-        "Kappa stands out with a modern design.",
+    'description': [
+        'Theta is top-rated for safety.',
+        'Zeta is an innovative solution.',
+        'Epsilon is versatile and easy to use.',
+        'Eta provides exceptional value.',
+        'Iota is compact and convenient.',
+        'Delta is designed for efficiency.',
+        'Kappa stands out with a modern design.',
+        'Gamma offers premium quality.',
+        'Alpha is a durable and stylish product.',
+        'Beta is reliable and affordable.',
+        'Lambda combines elegance and functionality.',
+        'Sigma is robust and built to last.',
+        'Tau is perfect for everyday use.',
+        'Upsilon provides unmatched versatility.',
+        'Phi is known for its innovative design.',
+        'Chi offers exceptional comfort.',
+        'Psi is an eco-friendly product.',
+        'Omega stands out with its sleek design.',
+        'Mu is highly efficient and user-friendly.',
+        'Nu delivers outstanding performance.',
+        'Xi is a premium quality product.',
+        'Omicron is compact and highly durable.',
+        'Pi combines style and functionality.',
+        'Rho is perfect for modern homes.',
+        'Sigma offers great value for money.',
+        'Tau is easy to use and highly reliable.',
+        'Upsilon is a top choice for professionals.',
+        'Phi features a contemporary design.',
+        'Chi is safe and comfortable for babies.',
+        'Psi is sustainable and eco-friendly.'
     ],
-    "price": np.random.uniform(10, 100, size=10).round(2),
-    "category": [
-        "Electronics",
-        "Home Goods",
-        "Electronics",
-        "Automotive",
-        "Electronics",
-        "Fashion",
-        "Home Goods",
-        "Baby Products",
-        "Electronics",
-        "Fashion",
+    'price': [
+        34.15, 76.86, 65.94, 38.86, 24.36, 10.55, 16.84, 10.22, 39.58, 83.92,
+        45.50, 55.60, 27.45, 60.25, 70.30, 33.80, 48.90, 52.75, 22.10, 47.85,
+        65.40, 29.90, 40.75, 53.65, 55.60, 27.45, 60.25, 70.30, 33.80, 48.90
     ],
+    'category': [
+        'Baby Products', 'Fashion', 'Electronics', 'Home Goods', 'Electronics', 'Automotive', 'Fashion',
+        'Electronics', 'Electronics', 'Home Goods', 'Fashion', 'Home Goods', 'Electronics', 'Automotive',
+        'Fashion', 'Baby Products', 'Home Goods', 'Electronics', 'Automotive', 'Electronics',
+        'Fashion', 'Electronics', 'Home Goods', 'Home Goods', 'Home Goods', 'Electronics', 'Automotive',
+        'Fashion', 'Baby Products', 'Home Goods'
+    ]
 }
+
 
 # Convert data to DataFrame
 df = pd.DataFrame(data)
 
 # Augment data
 augmented_df = augment_data(
-    df, augmentation_factor=5
+    df, augmentation_factor=0
 )  # Augment each example by generating 5 new examples with synonym replacement
 
 # Concatenate original and augmented data

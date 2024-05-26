@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def load_data(filepath):
     # Load the dataset
-    df = pd.read_csv(filepath)  # Update the filepath if necessary
+    df = pd.read_csv(filepath)
     return df["description"], df["category"]
 
 
@@ -22,16 +22,19 @@ def load_tools():
 
 def load_my_model(filepath):
     # Load the trained model
-    model = tf_load_model(filepath)  # Update the filepath if necessary
+    model = tf_load_model(filepath)
     return model
 
 
 def predict_categories(descriptions, tokenizer, model, max_length):
     # Tokenize and pad descriptions
     seq = tokenizer.texts_to_sequences(descriptions)
+    print("Sequences:", seq)
     padded = pad_sequences(seq, maxlen=max_length, padding="post")
+    print("Padded Sequences:", padded)
     # Predict categories
     predictions = model.predict(padded)
+    print("Raw Predictions:", predictions)
     predicted_classes = np.argmax(predictions, axis=1)
     return predicted_classes
 
@@ -39,7 +42,6 @@ def predict_categories(descriptions, tokenizer, model, max_length):
 def evaluate_model(y_true, y_pred, label_classes):
     # Convert numerical labels in y_pred to string labels
     y_pred_labels = [label_classes[label] for label in y_pred]
-
     # Compute evaluation metrics
     accuracy = accuracy_score(y_true, y_pred_labels)
     report = classification_report(y_true, y_pred_labels, target_names=label_classes)
@@ -48,18 +50,17 @@ def evaluate_model(y_true, y_pred, label_classes):
 
 if __name__ == "__main__":
     # Load data
-    X_test, y_test = load_data(
-        "generated_data1.csv"
-    )  # Update the filepath if necessary
+    X_test, y_test = load_data("generated_data1.csv")
+    print("Test Descriptions:", X_test)
+    print("Test Categories:", y_test)
 
     # Load tools
     tokenizer, label_classes = load_tools()
+    print("Label Classes:", label_classes)
 
     # Load model
-    model = load_my_model(
-        "product_classifier_model.keras"
-    )  # Update the filepath if necessary
-    max_length = int(open("max_length.txt", "r").read())  # Load max_length
+    model = load_my_model("product_classifier_model.keras")
+    max_length = int(open("max_length.txt", "r").read())
 
     # Predict categories
     y_pred = predict_categories(X_test, tokenizer, model, max_length)
